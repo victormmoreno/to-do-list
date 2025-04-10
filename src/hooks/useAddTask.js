@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import useModalStore from '../store/modalStore';
+import useTaskStore from '../store/taskStore';
 
-export function useAddTask({ onAdd }) {
-    const [isOpen, setIsOpen] = useState(false);
+export function useAddTask() {
+    const { openModal, closeModal, isModalOpen } = useModalStore();
+    const { addTask } = useTaskStore();
 
-    const handleOpen = () => setIsOpen(true);
-    const handleClose = () => setIsOpen(false);
+    const handleOpen = () => {
+        openModal();
+    };
+
+    const handleClose = () => {
+        closeModal();
+    };
 
     const handleSave = (formData) => {
-        onAdd({
+        addTask({
             ...formData,
             limit_date: new Date(formData.limit_date).toISOString()
         });
@@ -15,7 +22,7 @@ export function useAddTask({ onAdd }) {
     };
 
     return {
-        isOpen,
+        isOpen: isModalOpen,
         handleOpen,
         handleClose,
         handleSave

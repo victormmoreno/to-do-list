@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import useFormStore from './formStore';
 
 const useModalStore = create((set) => ({
   isModalOpen: false,
@@ -7,9 +8,10 @@ const useModalStore = create((set) => ({
   openModal: (task) => {
     set({ isModalOpen: true, currentTask: task });
   },
+  
   closeModal: () => {
-    set({ isModalOpen: false, currentTask: null });
     useFormStore.getState().resetForm();
+    set({ isModalOpen: false, currentTask: null });
   }
 }));
 
