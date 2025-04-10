@@ -1,12 +1,77 @@
-# React + Vite
+# To-Do List App con React y Zustand
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![App Preview](public/screenshot.png) <!-- Agrega una captura de pantalla luego -->
 
-Currently, two official plugins are available:
+Una aplicación de lista de tareas moderna construida con:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ React 18
+- 🎨 Tailwind CSS
+- 🏗️ Vite
+- 🗄️ Zustand para gestión de estado
+- 📅 Persistencia en localStorage
 
-## Expanding the ESLint configuration
+## Características principales
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Gestión completa de tareas (crear, editar, eliminar, marcar como completadas)  
+📅 Fechas límite con recordatorios  
+🔍 Filtrado y ordenamiento de tareas  
+📱 Diseño responsive  
+🌙 Modo oscuro/claro (próximamente)  
+
+## Instalación
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/victormmoreno/todo-list-app.git
+cd todo-list-app
+```
+
+2. Instala las dependencias:
+```bash
+npm install
+# o
+yarn install
+```
+
+3. Inicia la aplicación:
+```bash
+npm run dev
+# o
+yarn dev
+```
+
+La aplicación estará disponible en [http://localhost:5173](http://localhost:5173)
+
+## Estructura del proyecto
+
+```
+/src
+├── components/    # Componentes reutilizables
+├── hooks/         # Custom hooks
+├── store/         # Zustand stores
+├── utils/         # Funciones utilitarias
+├── views/         # Componentes de vista
+└── App.jsx        # Componente principal
+```
+
+## Tecnologías utilizadas
+
+- [React](https://reactjs.org/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [date-fns](https://date-fns.org/) (para manejo de fechas)
+
+## Contribución
+
+Si deseas contribuir al proyecto:
+
+1. Haz fork del repositorio
+2. Crea una rama con tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Haz commit de tus cambios (`git commit -m 'Agrega nueva funcionalidad'`)
+4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
+
+## Licencia
+
+MIT © [Victor Moreno]
