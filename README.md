@@ -1,6 +1,6 @@
 # To-Do List App con React y Zustand
 
-![App Preview](public/screenshot.png) <!-- Agrega una captura de pantalla luego -->
+![App Preview](public/img/screenshot.png) <!-- Agrega una captura de pantalla luego -->
 
 Una aplicación de lista de tareas moderna construida con:
 
