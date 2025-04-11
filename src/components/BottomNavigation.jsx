@@ -2,7 +2,7 @@ import React from 'react';
 
 export function BottomNavigation({ activeTab, setActiveTab, addButton }) {
     return (
-        <div className="fixed shadow-lg z-50 w-full max-w-lg -translate-x-1/2 bg-white border border-gray-500 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
+        <div className="fixed shadow-lg z-50 w-full max-w-lg -translate-x-1/2 bg-white dark:bg-gray-800 border border-gray-500 dark:border-gray-600 rounded-full bottom-4 left-1/2">
             <div className="grid h-full max-w-lg grid-cols-3 mx-auto">
                 <TabButton 
                     active={activeTab === 'all'}
@@ -33,7 +33,7 @@ function TabButton({ active, onClick, icon, label }) {
         <button 
             onClick={onClick}
             type="button" 
-            className={`cursor-pointer inline-flex flex-col items-center justify-center px-5 rounded-full ${active ? 'bg-gray-200' : 'hover:bg-gray-50 dark:hover:bg-gray-800'} group`}>
+            className={`cursor-pointer inline-flex flex-col items-center justify-center px-5 rounded-full ${active ? 'bg-gray-200 dark:bg-gray-700' : 'hover:bg-gray-50 dark:hover:bg-gray-800'} group`}>
             <svg 
                 strokeWidth={1.5}
                 stroke="currentColor"

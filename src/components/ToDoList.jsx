@@ -42,9 +42,9 @@ export default function ToDoList({ activeTab, taskList }) {
     }, [filteredTasks, sortField, sortDirection]);
 
     return (
-        <section className="mb-6 sm:mb-8 bg-white p-4 rounded-lg shadow-sm">
+        <section className="mb-6 sm:mb-8 bg-white p-4 rounded-lg shadow-sm dark:text-white dark:bg-gray-500">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Lista de tareas</h1>
+                <h1 className="text-xl sm:text-2xl font-bold">Lista de tareas</h1>
                 <div className="flex items-center gap-2 w-full sm:w-auto">
                     <SortComponent onSortChange={setSort} />
                 </div>

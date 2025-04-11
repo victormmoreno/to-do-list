@@ -7,7 +7,7 @@ export function SortView({
     return (
         <div className="flex items-center space-x-4 mb-4">
             <div className="flex items-center">
-                <label htmlFor="sort-field" className="mr-2 text-sm font-medium text-gray-700">
+                <label htmlFor="sort-field" className="mr-2 text-sm font-medium text-gray-700 dark:text-white">
                     Ordenar por:
                 </label>
                 <select
@@ -23,7 +23,7 @@ export function SortView({
             </div>
             <button
                 onClick={onDirectionChange}
-                className="flex items-center text-sm text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-sm text-sm px-2 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                className="cursor-pointer flex items-center text-sm text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-sm text-sm px-2 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                 title={sortDirection === 'asc' ? 'Ascendente' : 'Descendente'}
             >
                 {sortDirection === 'asc' ? (

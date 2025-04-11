@@ -41,12 +41,12 @@ export function FormView({
                 {errors.limit_date && <p className="text-red-500 text-sm mt-1">{errors.limit_date}</p>}
             </div>
             <div className="flex justify-end space-x-2">
-                <button type="button" onClick={onCancel} className="px-4 py-2 bg-gray-300 rounded">
+                <button type="button" onClick={onCancel} className="cursor-pointer px-4 py-2 bg-gray-300 rounded">
                     Cancelar
                 </button>
                 <button
                     type="submit"
-                    className={`px-4 py-2 text-white rounded ${isValid ? 'bg-blue-500' : 'bg-gray-400 cursor-not-allowed'}`}
+                    className={`px-4 py-2 text-white rounded ${isValid ? 'bg-blue-500 cursor-pointer' : 'bg-gray-400 cursor-not-allowed'}`}
                     disabled={!isValid}
                 >
                     Guardar
